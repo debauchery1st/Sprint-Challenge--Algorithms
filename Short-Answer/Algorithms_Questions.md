@@ -11,8 +11,6 @@ a)  a = 0
       a = a + n * n
 ```
 
-    Answer: O(n³)
-
 ```
 b)  sum = 0
     for i in range(n):
@@ -22,8 +20,6 @@ b)  sum = 0
         sum += 1
 ```
 
-    Answer: O(n²)
-
 ```
 c)  def bunnyEars(bunnies):
       if bunnies == 0:
@@ -32,21 +28,8 @@ c)  def bunnyEars(bunnies):
       return 2 + bunnyEars(bunnies-1)
 ```
 
-    Answer: O(1)
-
 ## Exercise II
 
 Suppose that you have an n-story building and plenty of eggs. Suppose also that an egg gets broken if it is thrown off floor f or higher, and doesn't get broken if dropped off a floor less than floor f. Devise a strategy to determine the value of f such that the number of dropped + broken eggs is minimized.
 
 Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
-
-      # starting at the ground.
-      #
-      # (begin)
-      #   travel up by one floor.
-      #   drop egg.
-      #   return floor number if the egg broke
-      #   return "unbreakable" if we've reach the top floor
-      # (loop)
-      #
-      #     *run-time-complexity is O(n)
