@@ -2,13 +2,15 @@
 
 ## Exercise I
 
-      a) O(n³)
+      a) O(n)
+      (inner-loop specifics)
 
 
-      b) O(n²)
+      b) O(n log(n))
+      (inner-loop specifics)
 
-
-      c) O(1)
+      c) O(n)
+      (recurse n times)
 
 ## Exercise II
 
