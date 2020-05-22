@@ -3,14 +3,21 @@ Your function should take in a single parameter (a string `word`)
 Your function should return a count of how many occurences of ***"th"*** occur within `word`. Case matters.
 Your function must utilize recursion. It cannot contain any loops.
 '''
+word_counts = {}
 
 
-def count_th(word, c=0):
+def count_th(word):
     # TBC
-    if len(word) < 2:
-        return c
-    a, b = word[0], word[1]
+    mem = word_counts.get(word) or [0, 0]
+    count, pos = mem
+    rest = word[pos:]
+    if len(rest) < 2:
+        # less than 2 characters
+        return count
+    a, b = rest[0], rest[1]
     if a == "t" and b == "h":
-        c += 1
-        return count_th(word[2:], c)  # select everything after the first 2
-    return count_th(word[1:], c)  # recurse
+        count += 1
+        word_counts[word] = [count, pos+2]
+    else:
+        word_counts[word] = [count, pos+1]
+    return count_th(word)  # select everything after the first 2
