@@ -1,15 +1,26 @@
-#### Please add your answers to the ***Analysis of  Algorithms*** exercises here.
+#### Please add your answers to the **_Analysis of Algorithms_** exercises here.
 
 ## Exercise I
 
-a)
+      a) O(n)
+      (inner-loop specifics)
 
 
-b)
+      b) O(n log(n))
+      (inner-loop specifics)
 
-
-c)
+      c) O(n)
+      (recurse n times)
 
 ## Exercise II
 
-
+      # starting at the ground.
+      #
+      # (begin)
+      #   travel up by one floor.
+      #   drop egg.
+      #   return floor number if the egg broke
+      #   return "unbreakable" if we've reach the top floor
+      # (loop)
+      #
+      #     *run-time-complexity is O(n)
